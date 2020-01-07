@@ -209,7 +209,7 @@ body {
     position: absolute; top: 0; right: 0;
 }
 .contents .column {
-    height: 400px;
+    height: 430px;
     padding: 15px 15px;
     border-bottom: 1px solid #dbdbdb;
 }
@@ -246,6 +246,46 @@ body {
 }
 
 
+/* contents2 - 한줄, 두줄 효과 */
+.content_left .col2 .notice {position: relative;}
+.content_left .col2 .notice h5 {
+    font-size: 15px; color: #2f7fa6;
+    padding-bottom: 3px;
+}
+.content_left .col2 .notice .more_btn {
+    font-size: 12px; color: #878787;
+    position: absolute; top: 3px; right: 5px;
+}
+.content_left .col2 .notice ul {}
+.content_left .col2 .notice ul li {
+    position: relative;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.content_left .col2 .notice ul a::before {
+    content: '';
+    position: absolute; left: 1px; top: 7px;
+    width: 4px; height: 4px; border-radius: 50%;
+    background-color: #3192bf;
+}
+
+/* notice 1 */
+.content_left .col2 .notice1 ul a { 
+    display: block;
+    width: 100%;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* notice 2 */
+.content_left .col2 .notice2 ul a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden; text-overflow: ellipsis;
+    min-height: 40px; /* for ie */
+}
+
+
 /* footer [푸터] layout */
 .footer {}
 
@@ -253,8 +293,11 @@ body {
 /* media query */
 /* 화면 너비 0~1200px */
 @media (max-width: 1220px){
+    /* 반응형을 위한 container & row 설정 */
     .container {width: 100%;}
     .row {padding: 0 15px;}
+    
+    /* contents border 제거 -> scroll bar 안생기게 */
     .contents {border: 0;}
 }
 
@@ -264,6 +307,7 @@ body {
 
 /* 화면 너비 0~960px */
 @media (max-width: 960px){
+    /* 반응형 nav layout 설정 */
     .main_nav div, .main_nav div:last-child {
         width: 100%;
     }
@@ -273,6 +317,8 @@ body {
     .main_nav div ol {
         margin-bottom: 15px;
     }
+
+    /* 반응형 contents layout 설정 */
     .contents .content_center {
         margin-right: 0;
         border-right: 0;
@@ -281,6 +327,8 @@ body {
         width: 100%;
         position: static;
     }
+
+    /* 반응형 menu layout 설정 */
     .contents .content_left .column.col3, .contents .content_center .column.col3 {
         border-bottom: 1px solid #dbdbdb;
     }
@@ -288,8 +336,11 @@ body {
 
 /* 화면 너비 0~768px */
 @media (max-width: 768px){
+    /* 반응형 contents layout 설정 */
     .contents .content_left {width: 100%;}
     .contents .content_center {width: 100%; border-left: 0;}
+
+    /* 반응형 menu layout 설정 */
     .content_left .col1 .menu ul li a {
         transition: box-shadow 0.5s ease;
     }
@@ -302,13 +353,19 @@ body {
 
 /* 화면 너비 0~600px */
 @media (max-width: 600px){
-    .main_nav div ol li, .main_nav div:last-child ol li {
-        width: 50%;
-    }
+
+    /* 반응형 header layout 설정 */
     .header {height: auto;}
     .header .header_icon {display: none;}
     .header .header_tit {display: none;}
     .sub_title a.nav_btn {display: none;}
+
+    /* 반응형 nav layout 설정 */
+    .main_nav div ol li, .main_nav div:last-child ol li {
+        width: 50%;
+    }
+
+    /* 반응형 contents layout 설정 */
     .contents .content_left .column.col1 {height: auto;}
     .contents .content_left .column.col1 .col_tit {display: none;}
     .contents .content_left .column.col1 .col_desc {display: none;}
@@ -327,7 +384,7 @@ body {
         transition: background-color 0.5s ease;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
     }
-    .content_left .column.col1 .menu ul li a:nth-child(3n){
+    .content_left .col1 .menu ul li:nth-child(3n) a {
         margin-right: 0;
     }
     .content_left .col1 .menu ul li a:hover {
