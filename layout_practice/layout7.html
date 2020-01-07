@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout7</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        body {background: #E3F2FD;}
+        #wrap {width: 1200px; margin: 0 auto;}
+        .nav {width: 100%; height: 80px; background: #BBDEFB;}
+        .header {width: 100%; height: 250px; background: #90CAF9;}
+        .aside {float: left; width: 30%; height: 350px; background: #64B5F6;}
+        .main_section {}
+        .main_section .art1 {float: left; width: 70%; height: 175px; background: #42A5F5;}
+        .main_section .art2 {float: left; width: 70%; height: 175px; background: #2196F3;}
+        .sub_section {}
+        .sub_section .art1 {float: left; width: 33.33333%; height: 250px; background: #1E88E5;}
+        .sub_section .art2 {float: left; width: 33.33333%; height: 250px; background: #1976D2;}
+        .sub_section .art3 {float: left; width: 33.33333%; height: 250px; background: #1565C0;}
+        .banner {overflow: hidden; clear: both; width: 90%; padding: 5%; background: rgb(106, 161, 255);}
+        .banner>div {float: left; width: 19%; margin: 0 3%; height: 170px; background: #2962FF; border-radius: 10px;}
+        .footer {width: 100%; height: 80px; background: #0D47A1;}
+
+        /* 화면 너비 0 ~ 1200 px */
+        @media (max-width: 1220px){
+            #wrap {width: 100%;}
+            .sub_section .art1, .sub_section .art2 {width: 50%;}
+            .sub_section .art3 {display: none;}
+            .banner>div {width: 27%;}
+            .banner>div:last-child {display: none;}
+        }
+
+        /* 화면 너비 0 ~ 1024 px */
+        @media (max-width: 1024px){
+            .sub_section .art1, .sub_section .art2 {width: 100%; height: 200px;}
+            .banner>div {height: 120px;}
+        }
+
+        /* 화면 너비 0 ~ 768 px */
+        @media (max-width: 768px){
+            .aside {width: 100%; height: 120px;}
+            .main_section .art1 {width: 100%; height: 150px;}
+            .main_section .art2 {width: 100%; height: 150px;}
+            .banner>div {width: 94%; margin: 3% 3%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <nav class="nav"></nav>
+        <header class="header"></header>
+        <aside class="aside"></aside>
+        <section class="main_section">
+            <article class="art1"></article>
+            <article class="art2"></article>
+        </section>
+        <section class="sub_section">
+            <article class="art1"></article>
+            <article class="art2"></article>
+            <article class="art3"></article>
+        </section>
+        <section class="banner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

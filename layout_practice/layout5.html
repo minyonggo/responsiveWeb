@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">    
+<head>
+    <meta charset="UTF-8">
+    <title>Layout5</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        body {background: rgb(196, 230, 247);}
+        #wrap {width: 1200px; margin: 0 auto;}
+        .header {width: 100%; height: 80px; background: #81D4FA;}
+        .nav {float: left; width: 30%; height: 810px; background: #4FC3F7;}
+        .section {}
+        .section article.art1 {float: left; width: 70%; height: 270px; background: #03A9F4;}
+        .section article.art2 {float: left; width: 70%; height: 270px; background: #039BE5;}
+        .section article.art3 {float: left; width: 70%; height: 270px; background: #0288D1;}
+        .footer {clear: both; width: 100%; height: 80px; background: #0277BD;}
+
+        /* 화면 너비 0 ~ 1200px */
+        @media (max-width: 1220px){
+            #wrap {width: 100%;}
+            .header {height: 150px;}
+            .section article.art1 {height: 405px;}
+            .section article.art2 {height: 405px;}
+            .section article.art3 {width: 100%; height: 300px;}
+        }
+
+        /* 화면 너비 0 ~ 1024px */
+        @media (max-width: 1024px){
+            .header {height: 200px;}
+            .nav {width: 100%; height: 200px;}
+            .section article.art1 {width: 50%; height: 450px;}
+            .section article.art2 {width: 50%; height: 450px;}
+            .section article.art3 {height: 300px;}
+        }
+
+        /* 화면 너비 0 ~ 768px */
+        @media (max-width: 768px){
+            .header {height: 250px;}
+            .nav {height: 400px;}
+            .section article.art1 {width: 100%; height: 450px;}
+            .section article.art2 {width: 100%; height: 450px;}
+            .section article.art3 {display: none;}
+            .footer {height: 150px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header"></header>
+        <nav class="nav"></nav>
+        <section class="section">
+            <article class="art1"></article>
+            <article class="art2"></article>
+            <article class="art3"></article>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>
