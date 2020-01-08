@@ -204,12 +204,14 @@ body {
     border-left: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;
 }
+.contents .content_center .col3 {
+    height: 1100px;
+}
 .contents .content_right {
     width: 240px;
     position: absolute; top: 0; right: 0;
 }
 .contents .column {
-    height: 430px;
     padding: 15px 15px;
     border-bottom: 1px solid #dbdbdb;
 }
@@ -285,6 +287,16 @@ body {
     min-height: 40px; /* for ie */
 }
 
+/* contents3 - 고해상도 이미지 Blog */
+.content_left .col3 .blog1 img {width: 100%;}
+.content_left .col3 .blog1 .img_retina {display: none;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 1.5dppx) {
+       .blog1 .img-retina {display: initial;}
+       .blog1 .img-normal {display: none;}
+}
 
 /* footer [푸터] layout */
 .footer {}
