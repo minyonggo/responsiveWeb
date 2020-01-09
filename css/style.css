@@ -498,10 +498,10 @@ body {
     .content_left .col1 .menu ul li a span {display: none;}
 
     /* IMG_SLIDER 글씨 크기 조절 */
-    .content_center .col1 .img_slider .slider_img_desc em {
+    .content_center .col1 .img_slider figcaption em {
         font-size: 25px;
     }
-    .content_center .col1 .img_slider .slider_img_desc p {
+    .content_center .col1 .img_slider figcaption p {
         font-size: 15px;
     }
 }
@@ -509,10 +509,10 @@ body {
 /* 화면 너비 0~480px */
 @media (max-width: 480px){
     /* IMG_SLIDER 글씨 크기 조절 */
-    .content_center .col1 .img_slider .slider_img_desc em {
+    .content_center .col1 .img_slider figcaption em {
         font-size: 20px;
     }
-    .content_center .col1 .img_slider .slider_img_desc p {
+    .content_center .col1 .img_slider figcaption p {
         font-size: 10px;
     }
 }
