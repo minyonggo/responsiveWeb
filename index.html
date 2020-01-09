@@ -274,27 +274,33 @@
                                 <!-- img_slider -->
                                 <div class="img_slider">
                                     <div>
-                                        <img src="img/slider001.jpg" alt="slider_image1">
-                                        <figcaption class="slider_img_desc">
-                                            <em>Responsive Site</em>
-                                            <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
-                                        </figcaption>
+                                        <figure>
+                                            <img src="img/slider001.jpg" alt="slider_image1">
+                                            <figcaption class="slider_img_desc">
+                                                <em>Responsive Site1</em>
+                                                <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
+                                            </figcaption>
+                                        </figure>
                                     </div>
 
                                     <div>
-                                        <img src="img/slider001.jpg" alt="slider_image1">
-                                        <figcaption class="slider_img_desc">
-                                            <em>Responsive Site</em>
-                                            <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
-                                        </figcaption>
+                                        <figure>
+                                            <img src="img/slider001.jpg" alt="slider_image2">
+                                            <figcaption class="slider_img_desc">
+                                                <em>Responsive Site2</em>
+                                                <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
+                                            </figcaption>
+                                        </figure>
                                     </div>
 
                                     <div>
-                                        <img src="img/slider001.jpg" alt="slider_image1">
-                                        <figcaption class="slider_img_desc">
-                                            <em>Responsive Site</em>
-                                            <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
-                                        </figcaption>
+                                        <figure>
+                                            <img src="img/slider001.jpg" alt="slider_image3">
+                                            <figcaption class="slider_img_desc">
+                                                <em>Responsive Site3</em>
+                                                <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
+                                            </figcaption>
+                                        </figure>
                                     </div>
                                 </div>
                                 <!-- //img_slider -->
@@ -381,14 +387,13 @@
             autoplaySpeed: 3000,
             slidesToshow: 1,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
             dots: true,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
-                        arrows: true,
-                        dots: false
+                        autoplay: false
                     }
                 }
             ]
