@@ -309,9 +309,9 @@ body {
     background-size: cover;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 1.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 2dppx) {
         .blog2 .img_retina {
             background-image: url('../img/blog4_@2.jpg');
             background-size: cover;
