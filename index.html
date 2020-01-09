@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/slick.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="icon/favicon.ico">
@@ -267,8 +268,36 @@
                         <section class="content_center">
                             <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
                             <article class="column col1">
-                                <h4 class="col_tit">Title</h4>
-                                <p class="col_desc">이 곳은 설명 부분입니다.</p>
+                                <h4 class="col_tit">Slick Slider</h4>
+                                <p class="col_desc">slick.js를 이용한 이미지 슬라이드 입니다.</p>
+
+                                <!-- img_slider -->
+                                <div class="img_slider">
+                                    <div>
+                                        <img src="img/slider001.jpg" alt="slider_image1">
+                                        <figcaption class="slider_img_desc">
+                                            <em>Responsive Site</em>
+                                            <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
+                                        </figcaption>
+                                    </div>
+
+                                    <div>
+                                        <img src="img/slider001.jpg" alt="slider_image1">
+                                        <figcaption class="slider_img_desc">
+                                            <em>Responsive Site</em>
+                                            <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
+                                        </figcaption>
+                                    </div>
+
+                                    <div>
+                                        <img src="img/slider001.jpg" alt="slider_image1">
+                                        <figcaption class="slider_img_desc">
+                                            <em>Responsive Site</em>
+                                            <p>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</p>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                                <!-- //img_slider -->
                             </article>
                             <!-- //col1 -->
 
@@ -327,6 +356,7 @@
     <!-- JavaScript Libraries -->
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/modernizr-custom.js"></script>
+    <script src="js/slick.min.js"></script>
 
     <!-- Javascript -->
     <script>
@@ -342,6 +372,26 @@
         $('.twitter_icon').on('click',(event)=>{
             event.preventDefault();
             window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        });
+
+        /* img_slider - slick.js  */
+        $('.img_slider').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToshow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true,
+                        dots: false
+                    }
+                }
+            ]
         });
     </script>
 </body>
