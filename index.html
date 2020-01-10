@@ -356,9 +356,12 @@
                                 
                                 <!-- side1 -->
                                 <div class="side1">
-                                    <figure>
+                                    <figure class="front">
                                         <img src="img/side1.jpg" alt="이미지1">
                                     </figure>
+                                    <div class="back">
+                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                    </div>
                                 </div>
                                 <!-- //side1 -->
                             </article>
@@ -468,8 +471,25 @@
         });
 
         /* lightbox - lightGallery.js */
-        $('.lightbox').lightGallery({
+        $('.lightbox').lightGallery({});
 
+        /* nav 접기 / 펼치기 */
+        $('.nav_btn').on('click', function(event){
+            event.preventDefault();
+            $('.main_nav').slideToggle();
+            let btn = $(this).toggleClass("open");
+            if(btn.hasClass("open")){
+                btn.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            } else {
+                btn.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            }
+        });
+
+        $(window).resize(function(){
+            let wWidth = $(window).width();
+            if(wWidth < 600){
+                $(".main_nav").removeAttr('style');
+            }
         });
     </script>
 </body>
