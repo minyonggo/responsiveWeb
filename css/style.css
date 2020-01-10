@@ -17,7 +17,6 @@ body {
 }
 #contents {}
 #footer{
-    background: #e7e7e7;
     border-top: 1px solid #dbdbdb;
 }
 
@@ -204,8 +203,6 @@ body {
     min-height: 1375px;
     border-left: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;
-}
-.contents .content_center .col3 {
 }
 .contents .content_right {
     width: 240px;
@@ -427,7 +424,21 @@ body {
 
 
 /* footer [푸터] layout */
-.footer {}
+.footer {text-align: center; padding: 30px 50px;}
+.footer ul {padding: 10px 0;}
+.footer ul li {
+    display: inline-block;
+    padding: 0 7px 0 10px;
+    position: relative;
+    white-space: nowrap;
+}
+.footer ul li::before {
+    content: '';
+    width: 1px; height: 12px; background-color: #dbdbdb;
+    position: absolute; left: 0; top: 2px;
+}
+.footer ul li:first-child::before {width: 0;}
+.footer address {padding-top: 15px;}
 
 
 /* media query */
@@ -478,6 +489,18 @@ body {
     /* 반응형 menu layout 설정 */
     .contents .content_right {
         border-top: 1px solid #dbdbdb;
+    }
+
+    /* 반응형 side effect 설정 */
+    .contents .content_right {overflow: hidden;}
+    .contents .content_right .column {
+        float: left;
+        width: 33.3333%; box-sizing: border-box;
+        border-bottom: 0;
+        border-right: 1px solid #dbdbdb;
+    }
+    .contents .content_right .column.col3 {
+        border-right: 0;
     }
 }
 
@@ -549,6 +572,13 @@ body {
     /* contents5 - lightbox 반응형 */
     .square a:nth-child(10) {display: initial;}
     .square a {width: 49%}
+
+    /* 반응형 side effect 설정 */
+    .contents .content_right .column {
+        width: 50%;
+    }
+    .contents .content_right .column.col2 {border-right: 0;}
+    .contents .content_right .column.col3 {display: none;}
 }
 
 /* 화면 너비 0~480px */
@@ -566,4 +596,8 @@ body {
 @media (max-width: 320px){
     /* contents5 - lightbox 반응형 */
     .square a {width: 99%}
+    .contents .content_right .column {
+        width: 100%;
+    }
+    .contents .content_right .column.col1 {border-bottom: 1px solid #dbdbdb; border-right: 0;}
 }
