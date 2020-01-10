@@ -424,7 +424,10 @@ body {
 
 
 /* footer [푸터] layout */
-.footer {text-align: center; padding: 30px 50px;}
+.footer {
+    text-align: center;
+    padding: 30px 50px;
+}
 .footer ul {padding: 10px 0;}
 .footer ul li {
     display: inline-block;
