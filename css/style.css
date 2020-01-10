@@ -201,11 +201,11 @@ body {
 .contents .content_center {
     overflow: hidden;
     margin-right: 240px;
+    min-height: 1375px;
     border-left: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;
 }
 .contents .content_center .col3 {
-    height: 1115px;
 }
 .contents .content_right {
     width: 240px;
@@ -391,6 +391,41 @@ body {
     font-size: 14px;
 }
 
+/* contents5 - lightbox -> lightGallery */
+.square a {
+    float: left; width: 19%; margin: 0.5%;
+    position: relative;
+    overflow: hidden;
+}
+.square a img {
+    width: 100%; display: block;
+}
+.square a em {
+    background: rgba(0,0,0,0.77); color: #fff; text-align: center;
+    width: 100%;
+    position: absolute; left:0; bottom: -30px; 
+    transition: all .3s ease;
+}
+.square a:hover em {
+    bottom: 0;
+    background: rgba(0,0,0,0.57);
+}
+.square a:nth-child(1):hover img {filter: blur(2px);}
+.square a:nth-child(2):hover img {filter: brightness(50%);}
+.square a:nth-child(3):hover img {filter: contrast(10%);}
+.square a:nth-child(4):hover img {filter: grayscale(100%);}
+.square a:nth-child(5):hover img {filter: hue-rotate(120deg);}
+.square a:nth-child(6):hover img {filter: invert(100%);}
+.square a:nth-child(7):hover img {filter: opacity(10%);}
+.square a:nth-child(8):hover img {filter: saturate(10%);}
+.square a:nth-child(9):hover img {filter: sepia(120%);}
+.square a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);}
+
+/* contents6 - youtube video (iframe) */
+.video {position: relative; width: 100%; padding-bottom: 56.25%;}
+.video iframe {position: absolute; width: 100%; height: 100%;}
+
+
 /* footer [푸터] layout */
 .footer {}
 
@@ -404,10 +439,17 @@ body {
     
     /* contents border 제거 -> scroll bar 안생기게 */
     .contents {border: 0;}
+
+    /* contents5 - lightbox 반응형 */
+    .square a:nth-child(5n) {display: none;}
+    .square a {width: 24%}
 }
 
 /* 화면 너비 0~1024px */
 @media (max-width: 1024px){
+    /* contents5 - lightbox 반응형 */
+    .square a:nth-child(5) {display: initial;}
+    .square a {width: 32.33333%}
 }
 
 /* 화면 너비 0~960px */
@@ -434,8 +476,8 @@ body {
     }
 
     /* 반응형 menu layout 설정 */
-    .contents .content_left .column.col3, .contents .content_center .column.col3 {
-        border-bottom: 1px solid #dbdbdb;
+    .contents .content_right {
+        border-top: 1px solid #dbdbdb;
     }
 }
 
@@ -455,7 +497,6 @@ body {
         color: white;
     }
 }
-
 /* 화면 너비 0~600px */
 @media (max-width: 600px){
 
@@ -504,6 +545,10 @@ body {
     .content_center .col1 .img_slider figcaption p {
         font-size: 15px;
     }
+
+    /* contents5 - lightbox 반응형 */
+    .square a:nth-child(10) {display: initial;}
+    .square a {width: 49%}
 }
 
 /* 화면 너비 0~480px */
@@ -519,4 +564,6 @@ body {
 
 /* 화면 너비 0~320px */
 @media (max-width: 320px){
+    /* contents5 - lightbox 반응형 */
+    .square a {width: 99%}
 }
