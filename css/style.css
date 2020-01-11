@@ -597,6 +597,10 @@ body {
 /* 화면 너비 0~600px */
 @media (max-width: 600px){
 
+    /* body background 반응형 */
+    body{
+        background-position: 0px -78px;
+    }
     /* 반응형 header layout 설정 */
     .header {height: auto;}
     .header .header_icon {display: none;}
