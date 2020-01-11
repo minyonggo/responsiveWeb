@@ -284,13 +284,22 @@ body {
 }
 
 /* contents3 - 고해상도 이미지 Blog 1 */
-.content_left .col3 .blog1 .img_retina {display: none;}
+.content_left .col3 .blog1 .img_retina2, .content_left .col3 .blog1 .img_retina3 {display: none;}
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 1.5dppx) {
-           .content_left .col3 .blog1 .img_retina {display: initial;}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 2dppx) {
            .content_left .col3 .blog1 .img_normal {display: none;}
+           .content_left .col3 .blog1 .img_retina2 {display: initial;}
+           .content_left .col3 .blog1 .img_retina3 {display: none;}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+       only screen and (min-device-pixel-ratio: 3),
+       only screen and (min-resolution: 3dppx) {
+            .content_left .col3 .blog1 .img_normal {display: none;}
+            .content_left .col3 .blog1 .img_retina2 {display: none;}
+            .content_left .col3 .blog1 .img_retina3 {display: initial;}
 }
 
 
