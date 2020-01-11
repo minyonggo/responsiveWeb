@@ -56,8 +56,7 @@ body {
 .header .header_tit h1 {
     width: 400px; margin: 0 auto;
     background: #51b0dc;
-    color: white;
-    font-size: 30px; letter-spacing: 2px;
+    color: white; font-size: 30px; letter-spacing: 2px;
     transition: box-shadow 0.4s ease-in-out 0.1s;
 }
 .header .header_tit h1:hover {
